@@ -38,7 +38,8 @@ namespace PostgresCode
             string tbPass = xtbPass;//"postgres";
             string tbDataBaseName = xtbDataBaseName;//"dbMark";
 
-            string ast = $"server={tbHost};port={tbPort};User Id={tbUser};" +
+            //string ast = $"server={tbHost};port={tbPort};User Id={tbUser};" +
+            string ast = $"server={tbHost};User Id={tbUser};" +
                 $"Password={tbPass};Database={tbDataBaseName};";
 
             string connstring = String.Format(ast);

@@ -21,7 +21,7 @@ namespace WinForm
         public Form1()
         {
             InitializeComponent();
-            cTServer = TypeServer.ServerSQL;
+            cTServer = TypeServer.ServerPostgres;
 
             labTypeOfServer.Text = "Microsoft SQL Server";
             if(cTServer == TypeServer.ServerPostgres)
@@ -30,6 +30,9 @@ namespace WinForm
             labTable.Text = txtTableName.Text;
             jDataLoginIni();
             tabControl1.SelectTab("tabPg3");
+            if (cTServer == TypeServer.ServerPostgres)
+                panel3.Visible = false;
+
         }
 
         #endregion -----------
